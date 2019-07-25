@@ -12,53 +12,70 @@
 
 <body>
     <div class="container">
-        <div class="result">
-            0</div>
-
+        <div class="result"></div>
         <div class="block">
-            <button class="action">CE</button>
-            <button class="action">←</button>
-            <button class="action">%</button>
-            <button class="action">+</button>
-            <button class="num">7</button>
-            <button class="num">8</button>
-            <button class="num">9</button>
-            <button class="action">-</button>
-            <button class="num">4</button>
-            <button class="num">5</button>
-            <button class="num">6</button>
-            <button class="action">X</button>
-            <button class="num">1</button>
-            <button class="num">2</button>
-            <button class="num">3</button>
-            <button class="action">/</button>
-            <button class="num">0</button>
-            <button class="action">+-</button>
-            <button class="vir">,</button>
-            <button class="action">=</button>
+            <button class="action btn clear" value="clear">CE</button>
+            <button class="action btn return" value="return">←</button>
+            <button class="action btn pourcent" value="%">%</button>
+            <button class="action btn add" value="+">+</button>
+            <button class="btn num seven" value="7">7</button>
+            <button class="btn num height" value="8">8</button>
+            <button class="btn num nine" value="9">9</button>
+            <button class="btn num action substract" value="-">-</button>
+            <button class="btn num four" value="4">4</button>
+            <button class="btn num five" value="5">5</button>
+            <button class="btn num six" value="6">6</button>
+            <button class="action btn multiply" value="*">X</button>
+            <button class="btn num one" value="1">1</button>
+            <button class="btn num two" value="2">2</button>
+            <button class="btn num three" value="3">3</button>
+            <button class="action btn divide" value="/">/</button>
+            <button class="btn num zero" value="0">0</button>
+            <button class="action btn environ" value="+-">+-</button>
+            <button class="action btn vir" value=".">,</button>
+            <button class="action btn resu" value="=">=</button>
         </div>
     </div>
     <script>
-//textcontent
-//function resultat(action) {
-    
-//}
+        function resultat() {
+            console.log(this.value);
+            let result = document.querySelector(".btn").textContent;
+            document.querySelector(".result").textContent += (this.value);
+        }
+
+        let button = document.getElementsByClassName("btn");
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener("click", resultat)
+        }
+        
+
+
+
+        //textcontent
+        //function resultat(action) {}
 
 
         //console.log(eval("1+2"));
-          
-          let button = document.getElementsByClassName("button");
-          console.log(button);
-          let num = document.getElementsByClassName("num");
-          console.log(num);
-          button.addEventListener("click", num);
-          button.textContent();
-          
-          //let button = document.getElementsByClassName("num");
-         //console.log(button)
-         // let button = document.getElementsByClassName("vir");
-          //console.log(button)
-    
+        /*let table = [];
+        table[0] = "0"
+        table[1] = "1"
+        table[2] = "2"
+        table[3] = "3"
+        table[4] = "4"
+        table[5] = "5"
+        table[6] = "6"
+        table[7] = "7"
+        table[8] = "8"
+        table[9] = "9"*/
+
+        //let num = document.getElementsByClassName("num");
+        //console.log(num);
+        //button.textContent();
+        //let button = document.getElementsByClassName("num");
+        //console.log(button)
+        // let button = document.getElementsByClassName("vir");
+        //console.log(button)
+        //console.log("button".textContent);
     </script>
 </body>
 

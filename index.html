@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+</head>
+
+<body>
+    <script>
+        /*  // ALERT
+        alert("Bonjour");
+        prompt("Entrez nom");
+        let name = prompt();
+        alert("Bonjour" + name);
+        let isOk = confirm("sur ?");
+        console.log(isOk);
+        //conditions
+        if (i=0) {console.log(i);} 
+      
+        //
+        console.log("youpi");
+
+        let age = 12;
+        console.log(age);
+
+        age = "majeur";
+        console.log(age);
+        console.log(typeof (age));
+
+        let isCorrect = true; // ou false
+        console.log(typeof (isCorrect));
+
+        var age;
+        // chaine char
+
+        let firstname = "Bernard";
+        let lastname = "Campan";
+        let hello = "Bonjour" + firstname + " " + lastname;
+        console.log(hello);
+        //tableau
+        let tableau = ["Pierre", "Paul", "Jacques"];
+        // types spéciaux
+        undefined
+        null
+        nb = Number(nb);
+        // fonctions
+function sayHello(firstname){
+    console.log("Hello" + firstname)
+}
+sayHello(intel);
+sayHello(intel);
+sayHello(intel);
+sayHello(intel);
+
+        let nb = 12;
+        let result = square(nb);
+        console.log("Carré: "+ result);
+
+        return firstname;*/
+        //exo1
+        /*let crayon = prompt("Combien de crayons avez-vous ?");
+        let tab = [];
+        for (let i = 0; i < crayon; i++) {
+            tab[i] = prompt("Quelle est la couleur de" + i);
+        }
+console.log(tab);
+
+        let countV = 0;
+        let countJ = 0;
+        for (let i = 0; i < tab.length; i++) {
+            if (tab[i] == 'V') {
+                countV++;
+            } else if (tab[i] == 'J') {
+                countJ++;
+            }
+        }
+        alert("Il y a" + countV + "crayons verts");
+        alert("Il y a" + countJ + "crayons jaunes");*/
+
+        //exo2
+        /* let crayon ={
+             couleur:"bleue",
+             forme:"cylindre",
+             nbMine: 1,
+             ecrirecoucou: function(name)
+             {
+                 alert("coucou" + name);
+             }
+         };
+         console.log(crayon.couleur);
+
+         crayon.ecrirecoucou("bernard");*/
+        //objets
+        /* let car ={
+             nbRoues:4,
+             marque:"batmobile",
+             couleur:"rouge",
+             Vroum: function(voiture)
+             {
+                 alert("vroooouuumm vrouuummm, biiiiip, bippppppp! fait la " + voiture );
+
+             },
+         zecoloreuh: function(){
+         alert("eule carette elle est " + this.couleur + " comme eule pinard");
+         }
+         };
+
+         console.log(car.nbRoues);
+         console.log(car.marque);
+         console.log(car.couleur);
+
+         car.Vroum("batmobile");
+        car.couleur()
+
+        let car2={
+
+        }*/
+
+        /* function Voiture(marque, modele, annee, nbRoues=4) {
+             this.marque = marque;
+             this.modele = modele;
+             this.annee = annee;
+             this.nbRoues = nbRoues;
+             this.demarre = function () {
+                 alert("vrouum " + this.marque);
+             }
+         }
+
+         let voiture1 = new Voiture("opel", "corsa", 2008);
+         console.log(voiture1.marque);
+         console.log(voiture1.nbRoues);
+
+         let voiture2 = new Voiture("renault", "r5", 1988);
+         console.log(voiture2.annee);
+         alert(voiture2.annee);
+         voiture2.demarre();
+
+         let a = new Number(2);*/
+        //exo rectangle
+        /* function Rectangle(long, larg) {
+             this.long = long;
+             this.larg = larg;
+             this.aire = function () {
+                 result = (this.long * this.larg);
+                 return result;
+             }
+             this.perimetre = function () {
+                 result= ((this.long + this.larg) * 2);
+                 return result;
+             }
+             this.isSquare = function () {
+                 if (this.larg == this.long) {
+                     console.log("est un carré");
+                 } else {
+                     console.log("est un rectangle");
+                 }
+
+             }
+         }
+         
+         let rectangle1 = new Rectangle(3, 5);
+         console.log(rectangle1.aire());
+         console.log(rectangle1.perimetre());
+         
+         rectangle1.isSquare();
+
+         let rectangle2 = new Rectangle(2, 7);
+         console.log(rectangle2.aire());
+         console.log(rectangle2.perimetre());
+         
+         rectangle2.isSquare();
+
+         let rectangle3 = new Rectangle(6, 4);
+         console.log(rectangle3.aire());
+         console.log(rectangle3.perimetre());
+         
+         rectangle3.isSquare();
+
+         let rectangle4 = new Rectangle(12, 8);
+         console.log(rectangle4.aire());
+         console.log(rectangle4.perimetre());
+         
+         rectangle4.isSquare();
+
+         let rectangle5 = new Rectangle(13, 10);
+         console.log(rectangle5.aire());
+         console.log(rectangle5.perimetre());
+
+         rectangle5.isSquare();*/
+
+        //ou
+
+        /* function Rectangle(longueur, largeur)
+         {
+             this.longueur = longueur;
+
+             this.largeur = largeur;
+
+             this.getPerimeter = function ()
+             {
+                 return (this.largeur + this.longueur) * 2;
+             }
+
+             this.getArea = function ()
+
+             {
+                 return this.largeur * this.longueur;
+             }
+
+             this.isSquare = function ()
+
+             {
+                 return this.largeur === this.longueur;
+             }
+
+         }
+
+         let rectangles = [];
+
+         rectangles[0] = new Rectangle(12, 12);
+
+         rectangles[1] = new Rectangle(5, 7);
+
+         rectangles[2] = new Rectangle(6, 3);
+
+         rectangles[3] = new Rectangle(2, 2);
+
+         rectangles[4] = new Rectangle(4, 1);
+
+         for (let i = 0; i < rectangles.length; i++)
+
+         {
+             console.log(rectangles[i]);
+
+             console.log("Perimetre de l'objet " + i + "=" + rectangles[i].getPerimeter());
+
+             console.log("Aire de l'objet " + i + "=" + rectangles[i].getArea());
+
+             if (rectangles[i].isSquare())
+
+             {
+                 console.log("C'est un carré");
+
+             } else
+
+             {
+                 console.log("Ce n'est pas un carré");
+             }
+         }*/
+        //let table = ["Oh", "Dear", "we", "are", "in", "trouble"] ;
+        //console.log(table.join(" "));
+
+        let people = ["Greg", "Mary", "Devon", "James"];
+            console.log(people);
+
+            people.shift();
+            console.log(people);
+            people.pop();
+            console.log(people);
+            people.unshift("Matt");
+            console.log(people);
+            people.push("Yohann");
+            console.log(people);
+            
+            for (let i = 0; i <= people.indexOf("Mary"); i++) {
+                console.log(people);
+                
+            }
+
+           
+    </script>
+</body>
+
+</html>

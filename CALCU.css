@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 200px;
+    top: 70px;
+}
+
+.result {
+    background-color: black;
+    color: white;
+    width: 323px;
+    height: 100px;
+    margin-bottom: 0px;
+    border-radius: 2px;
+    font-size: 30px;
+}
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    height: 289px;
+    width: 324px;
+    justify-content: space-around;
+
+}
+
+button {
+    height: 38px;
+    width: 69px;
+    margin-top: 13px;
+    border-radius: 2px;
+    font-size: 29px;
+}
+.num{
+    background-color: greenyellow;
+}
+.action{background-color: blue;}

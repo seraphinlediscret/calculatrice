@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        section {
+            height: 500px;
+        }
+
+        #portfolio {
+            background-color: red;
+        }
+
+        #about {
+            background-color: blue;
+        }
+
+        #contact {
+            background-color: green;
+        }
+
+        ul>li {
+            display: inline;
+        }
+        a{
+        margin:30px;
+        color:greenyellow;
+        font-size: 50px;
+        }
+        nav{position: fixed;}
+    </style>
+</head>
+
+<body>
+
+    <section id="portfolio">
+        <h2>Portolio</h2>
+    </section>
+
+    <section id="about">
+        <h2>A propos</h2>
+    </section>
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+    </section>
+
+    <script>
+        let section = document.getElementsByTagName("section");
+        let title = document.getElementsByTagName("h2");
+        let nav = document.createElement("nav");
+        document.body.insertBefore(nav, section[0]);
+        let ul = document.createElement("ul");
+        nav.appendChild(ul);
+
+        for (let i = 0; i < section.length; i++) {
+
+            let li_a = document.createElement("a");
+            li_a.href = "#" + section[i].id;
+            li_a.textContent = title[i].textContent;
+            let ul_li = document.createElement("li");
+            ul_li.appendChild(li_a);
+            ul.appendChild(ul_li);
+
+        }
+    </script>
+
+
+</body>
+
+</html>

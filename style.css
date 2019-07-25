@@ -1,0 +1,7 @@
+html, body{padding: 0;
+    margin:0;
+}
+.toggle_btn{
+    height: 30px;
+    width: 30px;
+}

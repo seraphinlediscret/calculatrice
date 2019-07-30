@@ -12,10 +12,10 @@
 
 <body>
     <div class="container">
-        <div class="result"></div>
+        <div id="result"></div>
         <div class="block">
-            <button class="action btn clear" value="clear">CE</button>
-            <button class="action btn return" value="return">←</button>
+            <button class="action btn clear" id="CE">CE</button>
+            <button class="action btn return" id="suppr">←</button>
             <button class="action btn pourcent" value="%">%</button>
             <button class="action btn add" value="+">+</button>
             <button class="btn num seven" value="7">7</button>
@@ -33,59 +33,46 @@
             <button class="btn num zero" value="0">0</button>
             <button class="action btn environ" value="+-">+-</button>
             <button class="action btn vir" value=".">,</button>
-            <button class="action btn resu" value="=">=</button>
+            <button class="action btn resu" id="resu">=</button>
         </div>
     </div>
     <script>
-        function resultat() {
-            console.log(this.value);
-            let result = document.querySelector(".btn").textContent;
-            document.querySelector(".result").textContent += (this.value);
-        }
+        //////////////////////affichage//////////////////////
 
         let button = document.getElementsByClassName("btn");
+
+        let affichage = document.getElementById("result");
+
+        function resultat() {
+            console.log("coucou");
+            affichage.textContent += this.value;
+        }
+        
         for (let i = 0; i < button.length; i++) {
-            button[i].addEventListener("click", resultat)
+            button[i].addEventListener("click", resultat);
         }
         /////////////////////////calcul////////////////////////
-        calcul = new button ();
-        function calcul (){
 
-        }
-       if (condition) {
-           eval()
+        let egal = document.getElementById("resu");
+       egal.addEventListener("click", result);
+        
+        let clear = document.getElementById("CE");
+       clear.addEventListener("click", reset);
+
+         let effacer = document.getElementById("suppr");
+        effacer.addEventListener("click", delet);
+      
+       function reset() {
+           affichage.textContent = "";
        }
 
-
+       function delet() {
+          affichage.textContent = affichage.textContent.slice(0, -1, "");
+      }
+       function result(){
+           affichage.textContent = (eval(affichage.textContent));
+       }
         
-
-
-
-        //textcontent
-        //function resultat(action) {}
-
-
-        //console.log(eval("1+2"));
-        /*let table = [];
-        table[0] = "0"
-        table[1] = "1"
-        table[2] = "2"
-        table[3] = "3"
-        table[4] = "4"
-        table[5] = "5"
-        table[6] = "6"
-        table[7] = "7"
-        table[8] = "8"
-        table[9] = "9"*/
-
-        //let num = document.getElementsByClassName("num");
-        //console.log(num);
-        //button.textContent();
-        //let button = document.getElementsByClassName("num");
-        //console.log(button)
-        // let button = document.getElementsByClassName("vir");
-        //console.log(button)
-        //console.log("button".textContent);
     </script>
 </body>
 
